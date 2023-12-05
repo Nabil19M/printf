@@ -6,13 +6,13 @@
 * @args: The arguments
 * Return: 0 on success
 */
-
 int int_fun(va_list args)
 {
 	int n = va_arg(args, int);
-	int count = 0;
+	char buffer[11];
+	int len = 0;
 	unsigned int num;
-	int d = 1;
+	int i;
 
 	if (n == 0)
 	{
@@ -22,18 +22,18 @@ int int_fun(va_list args)
 	if (n < 0)
 	{
 		_putchar('-');
-		count++;
 		num = n * -1;
+		len++;
 	}
 	else
 		num = n;
-	while (num / d > 9)
-		d *= 10;
-	while (d != 0)
+
+	while (num)
 	{
-		count += _putchar(num / d + '0');
-		num %= d;
-		d /= 10;
+		buffer[len++] = '0' + num % 10;
+		num /= 10;
 	}
-	return (count);
+	for (i = len - 1 ; i >= 0; i--)
+		_putchar(buffer[i]);
+	return (len);
 }

@@ -28,10 +28,13 @@ int int_fun(va_list args)
 	else
 		num = n;
 
+	while (num / i > 9)
+		i *= 10;
 	while (num)
 	{
-		buffer[len++] = '0' + num % 10;
-		num /= 10;
+		buffer[len++] = '0' + num / i;
+		num %= i
+		i /= 10;
 	}
 	for (i = len - 1 ; i >= 0; i--)
 		_putchar(buffer[i]);

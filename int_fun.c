@@ -9,10 +9,10 @@
 int int_fun(va_list args)
 {
 	int n = va_arg(args, int);
-	char buffer[11];
+	char buffer[12];
 	int len = 0;
 	unsigned int num;
-	int i;
+	int i = 1;
 
 	if (n == 0)
 	{

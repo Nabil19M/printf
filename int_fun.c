@@ -9,10 +9,9 @@
 int int_fun(va_list args)
 {
 	int n = va_arg(args, int);
-	char buffer[12];
-	int len = 0;
+	int count = 0;
 	unsigned int num;
-	int i = 1;
+	int d = 1;
 
 	if (n == 0)
 	{
@@ -22,21 +21,25 @@ int int_fun(va_list args)
 	if (n < 0)
 	{
 		_putchar('-');
+		count++;
 		num = n * -1;
-		len++;
 	}
 	else
-		num = n;
-
-	while (num / i > 9)
-		i *= 10;
-	while (num)
 	{
-		buffer[len++] = '0' + num / i;
-		num %= i;
-		i /= 10;
+		num = n;
 	}
-	for (i = len - 1 ; i >= 0; i--)
-		_putchar(buffer[i]);
-	return (len);
+
+	while (num / d > 9)
+	{
+		d *= 10;
+	}
+
+	while (d != 0)
+	{
+		_putchar(num / d + '0');
+		count++;
+		num %= d;
+		d /= 10;
+	}
+	return (count);
 }

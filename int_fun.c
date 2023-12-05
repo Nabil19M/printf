@@ -27,9 +27,9 @@ int int_fun(va_list args)
 	}
 	else
 		num = n;
-	while(num / d > 9)
-		d*=10;
-	while(d != 0)
+	while (num / d > 9)
+		d *= 10;
+	while (d != 0)
 	{
 		count += _putchar(num / d + '0');
 		num %= d;

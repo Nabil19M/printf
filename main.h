@@ -12,8 +12,8 @@
  */
 typedef struct specifier
 {
-        char *sp;
-        int (*f)(va_list);
+	char *sp;
+	int (*f)(va_list);
 } spec_form;
 
 int _printf(const char *format, ...);

@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <limits.h>
 /**
- * struct format - Struct format
+ * struct specifier - Struct format
  *
  * @sp:char pointer of the specifier
  * @f: pointer to function for the conversion specifier

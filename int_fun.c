@@ -12,7 +12,7 @@ int int_fun(va_list args)
 	int n = va_arg(args, int);
 	int count = 0;
 	unsigned int num;
-	int d;
+	int d = 1;
 
 	if (n == 0)
 	{

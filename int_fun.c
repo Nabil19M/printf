@@ -33,7 +33,7 @@ int int_fun(va_list args)
 	while (num)
 	{
 		buffer[len++] = '0' + num / i;
-		num %= i
+		num %= i;
 		i /= 10;
 	}
 	for (i = len - 1 ; i >= 0; i--)

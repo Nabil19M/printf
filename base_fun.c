@@ -25,6 +25,6 @@ int bin_fun(va_list args)
 	}
 	bin_string[0] = '\0';
 	for (i = len; i >= 0; i--)
-		_putchar(bin_str[i]);
+		_putchar(bin_string[i]);
 	return (len - 1);
 }

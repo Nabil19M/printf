@@ -20,6 +20,7 @@ int _printf(const char *format, ...);
 int char_fun(va_list args);
 int int_fun(va_list args);
 int str_fun(va_list args);
+int bin_fun(va_list args);
 int (*get_fun(char *format))(va_list);
 int _putchar(char c);
 

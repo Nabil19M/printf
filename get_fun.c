@@ -12,6 +12,7 @@ int (*get_fun(char *format))(va_list)
 		{"s", str_fun},
 		{"d", int_fun},
 		{"i", int_fun},
+		{"b", bin_fun},
 		{NULL, NULL}
 	};
 	int i = 0;

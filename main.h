@@ -10,7 +10,7 @@
  * @sp:char pointer of the specifier
  * @f: pointer to function for the conversation specifier
  */
-typdef struct specifier
+typedef struct specifier
 {
 	char *sp;
 	int (*f)(va_list);

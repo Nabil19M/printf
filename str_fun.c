@@ -20,5 +20,5 @@ int str_fun(va_list args)
 		_putchar(str[len]);
 		len++;
 	}
-	return (len);
+	eturn (len);
 }

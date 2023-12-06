@@ -8,7 +8,7 @@
  * struct specifier - Struct format
  *
  * @sp:char pointer of the specifier
- * @f: pointer to function for the conversion specifier
+ * @f: pointer to function for the conversation specifier
  */
 typedef struct specifier
 {

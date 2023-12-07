@@ -13,18 +13,19 @@ int bin_fun(va_list args)
 	int i;
 
 	if (num == 0)
-	{
-		_putchar('0');
-		return (len);
-	}
+		return (_putchar('0'));
+	if (num < 1)
+		return (-1);
 	while (num)
 	{
 		bin_string[len] = (num & 1) ? '1' : '0';
 		len++;
 		num >>= 1;
 	}
-	bin_string[0] = '\0';
+		bin_string[0] = '\0';
+	if (bin_string == NULL)
+		return (-1);
 	for (i = len; i >= 0; i--)
 		_putchar(bin_string[i]);
-	return (len - 1);
+	return (len);
 }
